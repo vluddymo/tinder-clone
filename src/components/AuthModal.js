@@ -1,3 +1,7 @@
+import icon_color from "../images/icon_color.png";
+import appstore from "../images/appstore.png";
+import playstore from "../images/playstore.png";
+
 const AuthModal = ({ setShowModal }) => {
   const handleClick = () => {
     setShowModal(false);
@@ -5,25 +9,32 @@ const AuthModal = ({ setShowModal }) => {
 
   return (
     <div className="auth-modal">
-      <div className="closer" onClick={handleClick}>
+      <button className="closing-button" onClick={handleClick}>
         ✖️
-      </div>
+      </button>
       <div className="content">
+        <div className="icon-container">
+          <img className="icon" src={icon_color} />
+        </div>
         <h2>Create Account</h2>
         <p>
           By clicking Log in, you agree to our Terms. Learn how we process your
           data in our Privacy Policy and our Cookie Policy
         </p>
         <div className="oAuth">
-        <button>Login with Google</button>
-        <button>Login with Facebook</button>
-        <button>Login with Phone Number</button>
-          <a>Trouble logging in ?</a>
+          <button>Login with Google</button>
+          <button>Login with Facebook</button>
+          <button>Login with Phone Number</button>
+          <a href="#">Trouble logging in ?</a>
         </div>
         <h2>Get The App</h2>
         <div className="store-links">
-          <button>App Store</button>
-          <button>Google Play</button>
+          <a className="play-store" href="#">
+            <img alt="playstore logo" src={playstore} />
+          </a>
+          <a className="app-store" href="#">
+            <img alt="appstore logo" src={appstore} />
+          </a>
         </div>
       </div>
     </div>

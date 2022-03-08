@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <div className="overlay">
+    <div className="landing">
       <Nav
         minimal={false}
         authToken={authToken}
@@ -24,7 +24,7 @@ const Home = () => {
         showModal={showModal}
       />
       {showModal && <AuthModal setShowModal={setShowModal} />}
-      <div className="home-banner">
+      <div className="banner">
         <h1>
           Swipe Right<span>™</span>
         </h1>

@@ -17,13 +17,26 @@ body {
   background-size: cover;
 }
 
+button,
+a {
+  cursor: pointer;
+}
+
+div,
+p,
+h1,
+h2,
+h3 {
+  cursor: default;
+}
+
 * {
   font-family: "Readex Pro", sans-serif;
 }
 
 /* ----- Homepage ----- */
 
-.overlay {
+.landing {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -34,7 +47,7 @@ body {
   );
 }
 
-.home-banner {
+.landing .banner {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -44,18 +57,18 @@ body {
   height: stretch;
 }
 
-.home-banner h1 {
+.landing .banner h1 {
   margin: 0;
   font-size: 6rem;
   color: #fff;
   font-weight: 800;
 }
 
-.home-banner h1 span {
+.landing .banner h1 span {
   font-weight: 100;
 }
 
-.home-banner button {
+.landing .banner button {
   color: #fff;
   font-size: 1rem;
   font-weight: 300;
@@ -65,7 +78,7 @@ body {
   padding: 20px 70px;
 }
 
-.home-banner button:hover {
+.landing .banner button:hover {
   background: linear-gradient(260deg, #fe3072, #ff5904);
 }
 
@@ -136,14 +149,39 @@ nav ul a:hover {
 /* ----- Auth Modal ----- */
 
 .auth-modal {
+  position: relative;
   margin: auto;
   width: 360px;
   height: 600px;
   background-color: #fff;
   border-radius: 10px;
-  padding: 40px;
+  padding: 2.5rem;
   z-index: 2;
 }
+
+.auth-modal .icon-container {
+  width: 30px;
+  height: 35px;
+  margin: 0 auto;
+}
+
+.auth-modal .icon {
+  width: 100%;
+}
+
+.auth-modal h2 {
+  font-style: italic;
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
+.auth-modal  p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #555555;
+} 
 
 .auth-modal .content {
   height: stretch;
@@ -151,7 +189,63 @@ nav ul a:hover {
   flex-direction: column;
 }
 
-.closer {
+.auth-modal .oAuth {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+  border-bottom: #888 1px solid;
+}
+
+.auth-modal .oAuth button {
+  text-transform: uppercase;
+  height: 50px;
+  border: #555 1px solid;
+  border-radius: 25px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #555;
+}
+
+.auth-modal .oAuth button:hover {
+  color: #000;
+  border-color:#000;
+}
+
+.auth-modal .oAuth a {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.auth-modal .closing-button {
+  border: none;
+  background-color: transparent;
   width: 30px;
   height: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  position: absolute;
+  margin: 1rem;
+  padding: 0;
+  top: 0;
+  right: 0;
+}
+
+.store-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.store-links a {
+  width: 170px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-links img {
+  width: 90%;
 }
