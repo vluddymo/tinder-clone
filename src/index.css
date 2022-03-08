@@ -1,13 +1,75 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+/* ----- General ----- */
+
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+* {
+  font-family: "Readex Pro", sans-serif;
+}
+
+.primary-button {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  background: linear-gradient(45deg, #fe3072, #ff5904);
+  border-radius: 30px;
+  border: none;
+  padding: 12px 30px;
+}
+
+.primary-button:hover {
+  background: linear-gradient(260deg, #fe3072, #ff5904);
+}
+
+/* ----- Navbar ----- */
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav button {
+  height: fit-content;
+  align-self: center;
+  font-size: large;
+  color: #fe3072;
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-right: 1.25rem;
+}
+
+nav .logo-container {
+  width: 170px;
+  margin: 15px;
+}
+
+nav .logo-container .logo {
+  width: 100%;
+}
+
+/* ----- Homepage ----- */
+ 
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom, 
+    #000000a6,
+    #00000000
+  );
 }
