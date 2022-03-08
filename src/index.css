@@ -8,12 +8,13 @@ html {
 }
 
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   text-align: center;
   background-image: url("https://tinder.com/static/build/c141381259dfa9ced7553423fbc87973.webp");
   background-repeat: no-repeat;
-  background-size: 120%;
+  background-size: cover;
 }
 
 * {
@@ -45,7 +46,7 @@ body {
 
 .home-banner h1 {
   margin: 0;
-  font-size: 100px;
+  font-size: 6rem;
   color: #fff;
   font-weight: 800;
 }
@@ -56,7 +57,8 @@ body {
 
 .home-banner button {
   color: #fff;
-  font-size: 15px;
+  font-size: 1rem;
+  font-weight: 300;
   background: linear-gradient(45deg, #fe3072, #ff5904);
   border-radius: 30px;
   border: none;
@@ -110,6 +112,8 @@ nav .logo-container .logo {
 }
 
 nav ul {
+  display: flex;
+  list-style-type: none;
   width: fit-content;
   align-self: center;
   margin: 0;
@@ -139,4 +143,15 @@ nav ul a:hover {
   border-radius: 10px;
   padding: 40px;
   z-index: 2;
+}
+
+.auth-modal .content {
+  height: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.closer {
+  width: 30px;
+  height: 30px;
 }

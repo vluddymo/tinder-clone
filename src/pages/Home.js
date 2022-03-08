@@ -8,8 +8,11 @@ const Home = () => {
   const authToken = false;
 
   const handleClick = () => {
-    console.log("clicked");
-    setShowModal(true);
+    if (!authToken) {
+      console.log("clicked");
+      setShowModal(true);
+    }
+    console.log("log out");
   };
 
   return (

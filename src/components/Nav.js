@@ -17,11 +17,11 @@ const Nav = ({ minimal, authToken, setShowModal, showModal }) => {
           />
         </div>
         <ul>
-          <a href="#">Products</a>
-          <a href="#">Learn</a>
-          <a href="#">Safety</a>
-          <a href="#">Support</a>
-          <a href="#">Download</a>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Safety</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Download</a></li>
         </ul>
       </section>
       <section>
