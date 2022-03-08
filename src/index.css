@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
 
 /* ----- General ----- */
 
@@ -11,33 +11,77 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  background-image: url("https://tinder.com/static/build/c141381259dfa9ced7553423fbc87973.webp");
+  background-repeat: no-repeat;
+  background-size: 120%;
 }
 
 * {
   font-family: "Readex Pro", sans-serif;
 }
 
-.primary-button {
+/* ----- Homepage ----- */
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+}
+
+.home-banner {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: stretch;
+}
+
+.home-banner h1 {
+  margin: 0;
+  font-size: 100px;
   color: #fff;
-  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.home-banner h1 span {
+  font-weight: 100;
+}
+
+.home-banner button {
+  color: #fff;
   font-size: 15px;
   background: linear-gradient(45deg, #fe3072, #ff5904);
   border-radius: 30px;
   border: none;
-  padding: 12px 30px;
+  padding: 20px 70px;
 }
 
-.primary-button:hover {
+.home-banner button:hover {
   background: linear-gradient(260deg, #fe3072, #ff5904);
 }
 
 /* ----- Navbar ----- */
 
-
 nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+nav section {
+  display: flex;
 }
 
 nav button {
@@ -48,28 +92,51 @@ nav button {
   background-color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-right: 1.25rem;
+}
+nav button:disabled {
+  color: #c72659;
+  background-color: #e4e4e4;
 }
 
 nav .logo-container {
   width: 170px;
-  margin: 15px;
+  margin: 15px 0 15px 10px;
 }
 
 nav .logo-container .logo {
   width: 100%;
 }
 
-/* ----- Homepage ----- */
- 
-.overlay {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-    to bottom, 
-    #000000a6,
-    #00000000
-  );
+nav ul {
+  width: fit-content;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul a {
+  color: #fff;
+  font-size: large;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+nav ul a:focus,
+nav ul a:hover {
+  color: #9e2048d7;
+  text-decoration: underline;
+}
+
+/* ----- Auth Modal ----- */
+
+.auth-modal {
+  margin: auto;
+  width: 360px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  z-index: 2;
 }
