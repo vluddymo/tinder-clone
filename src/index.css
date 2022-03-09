@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
 
 /* ----- General ----- */
 
@@ -8,36 +8,95 @@ html {
 }
 
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   text-align: center;
+  background-image: url("https://tinder.com/static/build/c141381259dfa9ced7553423fbc87973.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+div,
+p,
+h1,
+h2,
+h3 {
+  cursor: default;
 }
 
 * {
   font-family: "Readex Pro", sans-serif;
 }
 
-.primary-button {
+/* ----- Homepage ----- */
+
+.landing {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+}
+
+.landing .banner {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: stretch;
+}
+
+.landing .banner h1 {
+  margin: 0;
+  font-size: 6rem;
   color: #fff;
-  text-transform: uppercase;
-  font-size: 15px;
+  font-weight: 800;
+}
+
+.landing .banner h1 span {
+  font-weight: 100;
+}
+
+.landing .banner button {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
   background: linear-gradient(45deg, #fe3072, #ff5904);
   border-radius: 30px;
   border: none;
-  padding: 12px 30px;
+  padding: 20px 70px;
 }
 
-.primary-button:hover {
+.landing .banner button:hover {
   background: linear-gradient(260deg, #fe3072, #ff5904);
 }
 
 /* ----- Navbar ----- */
 
-
 nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+nav section {
+  display: flex;
 }
 
 nav button {
@@ -48,28 +107,163 @@ nav button {
   background-color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-right: 1.25rem;
+}
+nav button:disabled {
+  color: #c72659;
+  background-color: #e4e4e4;
 }
 
 nav .logo-container {
   width: 170px;
-  margin: 15px;
+  margin: 15px 0 15px 10px;
 }
 
 nav .logo-container .logo {
   width: 100%;
 }
 
-/* ----- Homepage ----- */
- 
-.overlay {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-    to bottom, 
-    #000000a6,
-    #00000000
-  );
+nav ul {
+  display: flex;
+  list-style-type: none;
+  width: fit-content;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul a {
+  color: #fff;
+  font-size: large;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+nav ul a:focus,
+nav ul a:hover {
+  color: #9e2048d7;
+  text-decoration: underline;
+}
+
+/* ----- Auth Modal ----- */
+
+.auth-modal {
+  position: relative;
+  margin: auto;
+  width: 360px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2.5rem;
+  z-index: 2;
+}
+
+.auth-modal .icon-container {
+  width: 30px;
+  height: 35px;
+  margin: 0 auto;
+}
+
+.auth-modal .icon {
+  width: 100%;
+}
+
+.auth-modal h2 {
+  font-style: italic;
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
+.auth-modal p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #555555;
+}
+
+.auth-modal .content {
+  height: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-modal .oAuth {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+  border-bottom: #888 1px solid;
+}
+
+.auth-modal .oAuth button {
+  text-transform: uppercase;
+  height: 50px;
+  border: #555 1px solid;
+  border-radius: 25px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #555;
+}
+
+.auth-modal .oAuth button:hover {
+  color: #000;
+  border-color: #000;
+}
+
+.auth-modal .oAuth a {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.auth-modal .closing-button {
+  border: 3px solid #999;
+  border-radius: 15px;
+  background-color: transparent;
+  width: 30px;
+  font-size: 1.5rem;
+  position: absolute;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  padding: 6px;
+  animation: rotation-reverse 0.2s linear;
+}
+
+.auth-modal .closing-button:hover{
+  animation: rotation 0.2s linear reverse;
+  border: solid 3px #333;
+}
+
+@keyframes rotation {
+  from {transform: rotate(0deg); border: solid 3px #333;}
+  to {transform: rotate(90deg); border: solid  3px #999;}
+}
+
+@keyframes rotation-reverse {
+  from {transform: rotate(0deg); border: solid 3px #333;}
+  to {transform: rotate(90deg); border: solid  3px #999;}
+}
+
+.store-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.store-links a {
+  width: 170px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-links img {
+  width: 90%;
 }
