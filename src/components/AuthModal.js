@@ -1,22 +1,14 @@
-import icon_color from "../icons/icon_color.png";
-import closing_icon from "../icons/closing_icon.png";
 import appstore from "../images/appstore.png";
 import playstore from "../images/playstore.png";
+import ClosingButton from "./buttons/ClosingButton";
+import FlameIconW30 from "./icons/FlameIconW30"
 
 const AuthModal = ({ setShowModal }) => {
-  const handleClick = () => {
-    setShowModal(false);
-  };
-
   return (
     <div className="auth-modal">
-        <button className="closing-button" onClick={handleClick}>
-          <img className="icon" alt="cross" src={closing_icon}></img>
-        </button>
+      <ClosingButton setShowModal={setShowModal} />
       <div className="content">
-        <div className="icon-container">
-          <img className="icon" src={icon_color} />
-        </div>
+          <FlameIconW30/>
         <h2>Create Account</h2>
         <p>
           By clicking Log in, you agree to our Terms. Learn how we process your
@@ -25,7 +17,7 @@ const AuthModal = ({ setShowModal }) => {
         <div className="oAuth">
           <button>Login with Google</button>
           <button>Login with Facebook</button>
-          <button>Login with Phone Number</button>
+          <button>Login with E-Mail</button>
           <a href="#">Trouble logging in ?</a>
         </div>
         <h2>Get The App</h2>
