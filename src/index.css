@@ -176,12 +176,12 @@ nav ul a:hover {
   text-transform: uppercase;
 }
 
-.auth-modal  p {
+.auth-modal p {
   margin: 0;
   font-size: 0.85rem;
   font-weight: 300;
   color: #555555;
-} 
+}
 
 .auth-modal .content {
   height: stretch;
@@ -210,7 +210,7 @@ nav ul a:hover {
 
 .auth-modal .oAuth button:hover {
   color: #000;
-  border-color:#000;
+  border-color: #000;
 }
 
 .auth-modal .oAuth a {
@@ -219,17 +219,35 @@ nav ul a:hover {
 }
 
 .auth-modal .closing-button {
-  border: none;
+  border: 3px solid #999;
+  border-radius: 15px;
   background-color: transparent;
   width: 30px;
-  height: 30px;
-  text-align: center;
   font-size: 1.5rem;
   position: absolute;
   margin: 1rem;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   right: 0;
+  padding: 6px;
+  animation: rotation-reverse 0.2s linear;
+}
+
+.auth-modal .closing-button:hover{
+  animation: rotation 0.2s linear reverse;
+  border: solid 3px #333;
+}
+
+@keyframes rotation {
+  from {transform: rotate(0deg); border: solid 3px #333;}
+  to {transform: rotate(90deg); border: solid  3px #999;}
+}
+
+@keyframes rotation-reverse {
+  from {transform: rotate(0deg); border: solid 3px #333;}
+  to {transform: rotate(90deg); border: solid  3px #999;}
 }
 
 .store-links {

@@ -1,4 +1,5 @@
-import icon_color from "../images/icon_color.png";
+import icon_color from "../icons/icon_color.png";
+import closing_icon from "../icons/closing_icon.png";
 import appstore from "../images/appstore.png";
 import playstore from "../images/playstore.png";
 
@@ -9,9 +10,9 @@ const AuthModal = ({ setShowModal }) => {
 
   return (
     <div className="auth-modal">
-      <button className="closing-button" onClick={handleClick}>
-        ✖️
-      </button>
+        <button className="closing-button" onClick={handleClick}>
+          <img className="icon" alt="cross" src={closing_icon}></img>
+        </button>
       <div className="content">
         <div className="icon-container">
           <img className="icon" src={icon_color} />
