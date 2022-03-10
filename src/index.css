@@ -183,7 +183,7 @@ nav ul a:hover {
   color: #555555;
 }
 
-.auth-modal .content {
+.auth-modal .auth-content {
   height: stretch;
   display: flex;
   flex-direction: column;
@@ -198,7 +198,8 @@ nav ul a:hover {
   border-bottom: #888 1px solid;
 }
 
-.auth-modal .oAuth button {
+.auth-modal .oAuth button, 
+.auth-modal .secondary-button {
   text-transform: uppercase;
   height: 50px;
   border: #555 1px solid;
@@ -208,7 +209,13 @@ nav ul a:hover {
   color: #555;
 }
 
-.auth-modal .oAuth button:hover {
+.auth-modal .secondary-button {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.auth-modal .oAuth button:hover, 
+.auth-modal .secondary-button:hover {
   color: #000;
   border-color: #000;
 }
