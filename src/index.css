@@ -232,11 +232,11 @@ nav ul a:hover {
   top: 0;
   right: 0;
   padding: 6px;
-  animation: rotation-reverse 0.2s linear;
+  animation: rotation-reverse 0.1s ease-out;
 }
 
 .auth-modal .closing-button:hover{
-  animation: rotation 0.2s linear reverse;
+  animation: rotation 0.1s ease-in reverse;
   border: solid 3px #333;
 }
 
